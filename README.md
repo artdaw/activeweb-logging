@@ -10,6 +10,11 @@
         <version>1.0-SNAPSHOT</version>
     </dependency>
 
+    markup(:markdown, /md|mkdn?|markdown/) do |content|
+      Markdown.new(content).to_html
+    end
+
+
 2. in your Guice module bind `LoggerTypeListener`:
 
     bindListener(Matchers.any(), new LoggerTypeListener());
