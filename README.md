@@ -10,11 +10,18 @@
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 
-2. in your Guice module bind `LoggerTypeListener`:
+2. add repository where activeweb-logging is placed:
+
+		<repository>
+			<id>artdaw-snapshots</id>
+			<url>https://github.com/artdaw/m2/raw/master/snapshots</url>
+		</repository>
+
+3. in your Guice module bind `LoggerTypeListener`:
 
 		bindListener(Matchers.any(), new LoggerTypeListener());
 
-3. Profit! Use @InjectLogger as follows:
+4. Profit! Use @InjectLogger as follows:
 
 		@InjectLogger
 		private static Logger logger;
