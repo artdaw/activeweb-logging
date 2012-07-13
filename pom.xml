@@ -38,4 +38,14 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+      <repository>
+        <id>repo</id>
+        <url>http://github.com/artdaw/m2/raw/master/releases</url>
+      </repository>
+      <snapshotRepository>
+        <id>snapshot-repo</id>
+        <url>http://github.com/artdaw/m2/raw/master/snapshots</url>
+      </snapshotRepository>
+    </distributionManagement>
 </project>
